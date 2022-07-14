@@ -1,24 +1,24 @@
 create table countries
 (
     id              integer,
-    name            text,
-    iso3            text,
-    iso2            text,
+    name            varchar,
+    iso3            varchar,
+    iso2            varchar,
     numeric_code    integer,
-    phone_code      text,
-    capital         text,
-    currency        text,
-    currency_name   text,
-    currency_symbol text,
-    tld             text,
-    native          text,
-    region          text,
-    subregion       text,
-    timezones       text,
+    phone_code      varchar,
+    capital         varchar,
+    currency        varchar,
+    currency_name   varchar,
+    currency_symbol varchar,
+    tld             varchar,
+    native          varchar,
+    region          varchar,
+    subregion       varchar,
+    timezones       varchar,
     latitude        numeric,
     longitude       numeric,
-    emoji           text,
-    "emojiU"        text
+    emoji           varchar,
+    "emojiU"        varchar
 );
 
 alter table countries

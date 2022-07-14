@@ -1,12 +1,12 @@
 create table states
 (
     id           integer,
-    name         text,
+    name         varchar,
     country_id   integer,
-    country_code text,
-    country_name text,
-    state_code   text,
-    type         text,
+    country_code varchar,
+    country_name varchar,
+    state_code   varchar,
+    type         varchar,
     latitude     numeric,
     longitude    numeric
 );

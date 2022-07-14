@@ -34,15 +34,23 @@ public class City {
     @Basic
     @Column(name = "country_name")
     private String countryName;
-
     @Basic
     @Column(name = "latitude")
     private BigDecimal latitude;
     @Basic
     @Column(name = "longitude")
     private BigDecimal longitude;
-    /* */
-    //@Basic
-    //@Column(name = "wikiDataId")
-    //private String wikiDataId;
+    /*@OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id", nullable=true, referencedColumnName = "id")
+
+     */
+    @ManyToOne
+    @JoinColumn(name = "state_id", insertable = false, updatable = false)
+    private State state;
+
+    /*
+    @Basic
+    @Column(name = "wikiDataId")
+    private String wikiDataId;
+    */
 }

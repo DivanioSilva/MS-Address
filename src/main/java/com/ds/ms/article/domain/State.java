@@ -4,6 +4,8 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Table(name = "states")
 @Data
@@ -37,4 +39,5 @@ public class State {
     @Basic
     @Column(name = "longitude")
     private BigDecimal longitude;
+
 }

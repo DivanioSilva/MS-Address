@@ -39,5 +39,8 @@ public class State {
     @Basic
     @Column(name = "longitude")
     private BigDecimal longitude;
+    @ManyToOne
+    @JoinColumn(name = "country_id", insertable = false, updatable = false)
+    private Country country;
 
 }

@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 
 @Data
 @Table(name = "countries")
@@ -36,4 +37,7 @@ public class Country {
     private BigDecimal latitude;
     private BigDecimal longitude;
     private String emoji;
+    @OneToMany
+    @JoinColumn(name = "country_id", insertable = false, updatable = false)
+    private List<State> states;
 }

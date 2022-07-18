@@ -18,7 +18,8 @@ create table countries
     latitude        numeric,
     longitude       numeric,
     emoji           varchar,
-    "emojiU"        varchar
+    "emojiU"        varchar,
+    PRIMARY KEY (id)
 );
 
 alter table countries

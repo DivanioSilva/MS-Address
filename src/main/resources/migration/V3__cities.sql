@@ -10,7 +10,8 @@ create table cities
     country_name varchar,
     latitude     numeric,
     longitude    numeric,
-    "wikiDataId" varchar
+    "wikiDataId" varchar,
+    PRIMARY KEY (id)
 );
 
 comment on table cities is 'Foi feito o import pelo Intellij';

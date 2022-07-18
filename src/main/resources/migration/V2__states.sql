@@ -8,7 +8,8 @@ create table states
     state_code   varchar,
     type         varchar,
     latitude     numeric,
-    longitude    numeric
+    longitude    numeric,
+    PRIMARY KEY (id)
 );
 
 alter table states

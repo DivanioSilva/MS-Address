@@ -19,6 +19,7 @@
         <docker_internal_port>8094</docker_internal_port>
         <org.mapstruct.version>1.5.0.Final</org.mapstruct.version>
         <api.version></api.version>
+        <spring-cloud.version>2021.0.3</spring-cloud.version>
     </properties>
     <dependencies>
         <dependency>
@@ -71,11 +72,22 @@
             <version>7.8.0</version>
         </dependency>
         <dependency>
-            <groupId>com.opencsv</groupId>
-            <artifactId>opencsv</artifactId>
-            <version>5.2</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>

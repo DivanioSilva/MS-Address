@@ -1,0 +1,1 @@
+spring:  output:    ansi:      enabled: ALWAYS  datasource:    url: jdbc:postgresql://localhost:5432/silva    username: silva    password: silva  jpa:    hibernate:      ddl-auto: none#spring.jpa.show-sql=true#spring.jpa.properties.hibernate.format_sql=true

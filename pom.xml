@@ -15,8 +15,8 @@
     <description>MSAddress</description>
     <properties>
         <java.version>17</java.version>
-        <docker_port>8094</docker_port>
-        <docker_internal_port>8094</docker_internal_port>
+        <docker_port>8084</docker_port>
+        <docker_internal_port>8084</docker_internal_port>
         <org.mapstruct.version>1.5.0.Final</org.mapstruct.version>
         <api.version></api.version>
         <spring-cloud.version>2021.0.3</spring-cloud.version>

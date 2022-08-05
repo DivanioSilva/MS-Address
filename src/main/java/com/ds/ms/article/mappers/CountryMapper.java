@@ -1,7 +1,7 @@
 package com.ds.ms.article.mappers;
 
 import com.ds.ms.article.domain.Country;
-import com.ds.ms.article.domain.CountrySmallDto;
+import com.ds.ms.article.dto.CountrySmallDto;
 import com.ds.ms.article.dto.CountryWithoutStatesDto;
 import com.ds.ms.article.dto.CountryDto;
 import org.mapstruct.*;

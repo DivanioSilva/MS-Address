@@ -1,14 +1,17 @@
 package com.ds.ms.article.domain;
 
-import lombok.Data;
+import lombok.*;
+import org.hibernate.Hibernate;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Objects;
 
 @Table(name = "states")
-@Data
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
 @Entity
 public class State {
     @Id
@@ -43,4 +46,16 @@ public class State {
     @JoinColumn(name = "country_id", insertable = false, updatable = false)
     private Country country;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        State state = (State) o;
+        return id != null && Objects.equals(id, state.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }

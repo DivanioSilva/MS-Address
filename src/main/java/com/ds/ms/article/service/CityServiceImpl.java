@@ -2,11 +2,14 @@ package com.ds.ms.article.service;
 
 import com.ds.ms.article.domain.City;
 import com.ds.ms.article.dto.CityDto;
+import com.ds.ms.article.dto.CountryDto;
 import com.ds.ms.article.exceptions.EntityNotFoundException;
 import com.ds.ms.article.mappers.CityMapper;
 import com.ds.ms.article.repository.CityRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @AllArgsConstructor
 @Service
@@ -30,4 +33,5 @@ public class CityServiceImpl implements CityService{
         City city = this.cityRepository.findByName(name).orElseThrow(EntityNotFoundException::new);
         return this.cityMapper.cityToCityDto(city);
     }
+
 }

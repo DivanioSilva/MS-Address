@@ -1,4 +1,4 @@
-package com.ds.ms.article.domain;
+package com.ds.ms.article.dto;
 
 import java.io.Serializable;
 

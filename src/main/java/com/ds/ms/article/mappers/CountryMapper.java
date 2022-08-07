@@ -1,6 +1,7 @@
 package com.ds.ms.article.mappers;
 
 import com.ds.ms.article.domain.Country;
+import com.ds.ms.article.domain.CountryAndStatesDto;
 import com.ds.ms.article.dto.CountrySmallDto;
 import com.ds.ms.article.dto.CountryWithoutStatesDto;
 import com.ds.ms.article.dto.CountryDto;
@@ -35,4 +36,6 @@ public interface CountryMapper {
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     Country updateCountryFromCountrySmallDto(CountrySmallDto countrySmallDto, @MappingTarget Country country);
+
+    CountryAndStatesDto countryToCountryAndStatesDto(Country country);
 }

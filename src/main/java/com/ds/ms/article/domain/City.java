@@ -2,6 +2,7 @@ package com.ds.ms.article.domain;
 
 import lombok.*;
 import org.hibernate.Hibernate;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -11,56 +12,56 @@ import java.util.Objects;
 @Setter
 @ToString
 @RequiredArgsConstructor
-@Table(name = "cities")
 @Entity
+@Table(name = "cities")
 public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
+    @Column(name = "id")
     private Long id;
-    @Basic
+
     @Column(name = "name")
+    @Type(type = "org.hibernate.type.TextType")
     private String name;
-    @Basic
+
     @Column(name = "state_id")
     private Integer stateId;
-    @Basic
+
     @Column(name = "state_code")
+    @Type(type = "org.hibernate.type.TextType")
     private String stateCode;
-    @Basic
+
     @Column(name = "state_name")
+    @Type(type = "org.hibernate.type.TextType")
     private String stateName;
-    @Basic
+
     @Column(name = "country_id")
     private Integer countryId;
-    @Basic
+
     @Column(name = "country_code")
+    @Type(type = "org.hibernate.type.TextType")
     private String countryCode;
-    @Basic
+
     @Column(name = "country_name")
+    @Type(type = "org.hibernate.type.TextType")
     private String countryName;
-    @Basic
+
     @Column(name = "latitude")
     private BigDecimal latitude;
-    @Basic
+
     @Column(name = "longitude")
     private BigDecimal longitude;
-    /*@OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id", nullable=true, referencedColumnName = "id")
 
-     */
     @ManyToOne
     @JoinColumn(name = "state_id", insertable = false, updatable = false)
     private State state;
-    @ManyToOne
-    @JoinColumn(name = "country_id", insertable = false, updatable = false)
-    private Country country;
 
-    /*
-    @Basic
+/*
     @Column(name = "wikiDataId")
+    @Type(type = "org.hibernate.type.TextType")
     private String wikiDataId;
-    */
+
+     */
 
     @Override
     public boolean equals(Object o) {

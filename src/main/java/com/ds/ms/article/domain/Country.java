@@ -2,9 +2,11 @@ package com.ds.ms.article.domain;
 
 import lombok.*;
 import org.hibernate.Hibernate;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -12,40 +14,88 @@ import java.util.Objects;
 @Setter
 @ToString
 @RequiredArgsConstructor
-@Table(name = "countries")
 @Entity
+@Table(name = "countries")
 public class Country {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
+    @Column(name = "id")
     private Long id;
+
+    @Column(name = "name")
+    @Type(type = "org.hibernate.type.TextType")
     private String name;
+
+    @Column(name = "iso3")
+    @Type(type = "org.hibernate.type.TextType")
     private String iso3;
+
+    @Column(name = "iso2")
+    @Type(type = "org.hibernate.type.TextType")
     private String iso2;
+
     @Column(name = "numeric_code")
-    private int numericCode;
+    private Integer numericCode;
+
+    @Column(name = "phone_code")
+    @Type(type = "org.hibernate.type.TextType")
+    private String phoneCode;
+
+    @Column(name = "capital")
+    @Type(type = "org.hibernate.type.TextType")
     private String capital;
+
+    @Column(name = "currency")
+    @Type(type = "org.hibernate.type.TextType")
     private String currency;
+
     @Column(name = "currency_name")
+    @Type(type = "org.hibernate.type.TextType")
     private String currencyName;
+
     @Column(name = "currency_symbol")
+    @Type(type = "org.hibernate.type.TextType")
     private String currencySymbol;
+
+    @Column(name = "tld")
+    @Type(type = "org.hibernate.type.TextType")
     private String tld;
+
     @Column(name = "native")
-    private String nativeC;
+    @Type(type = "org.hibernate.type.TextType")
+    private String nativeField;
+
+    @Column(name = "region")
+    @Type(type = "org.hibernate.type.TextType")
     private String region;
+
     @Column(name = "subregion")
-    private String subRegion;
+    @Type(type = "org.hibernate.type.TextType")
+    private String subregion;
+
     @Column(name = "timezones")
-    private String timeZone;
+    @Type(type = "org.hibernate.type.TextType")
+    private String timezones;
+
+    @Column(name = "latitude")
     private BigDecimal latitude;
+
+    @Column(name = "longitude")
     private BigDecimal longitude;
+
+    @Column(name = "emoji")
+    @Type(type = "org.hibernate.type.TextType")
     private String emoji;
-    @OneToMany
-    @JoinColumn(name = "country_id", insertable = false, updatable = false)
-    @ToString.Exclude
-    private List<State> states;
+
+    @OneToMany(mappedBy = "country", orphanRemoval = true)
+    @OrderBy("name")
+    private List<State> states = new ArrayList<>();
+
+/*
+    @Column(name = "\"emojiU\"")
+    @Type(type = "org.hibernate.type.TextType")
+    private String emojiU;
+     */
 
     @Override
     public boolean equals(Object o) {

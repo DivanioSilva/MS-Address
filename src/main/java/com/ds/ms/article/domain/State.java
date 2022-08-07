@@ -2,48 +2,57 @@ package com.ds.ms.article.domain;
 
 import lombok.*;
 import org.hibernate.Hibernate;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.LinkedHashSet;
 import java.util.Objects;
+import java.util.Set;
 
-@Table(name = "states")
 @Getter
 @Setter
 @ToString
 @RequiredArgsConstructor
 @Entity
+@Table(name = "states")
 public class State {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
+    @Column(name = "id")
     private Long id;
-    @Basic
+
     @Column(name = "name")
+    @Type(type = "org.hibernate.type.TextType")
     private String name;
-    @Basic
+
     @Column(name = "country_id")
     private Integer countryId;
-    @Basic
+
     @Column(name = "country_code")
+    @Type(type = "org.hibernate.type.TextType")
     private String countryCode;
-    @Basic
+
     @Column(name = "country_name")
+    @Type(type = "org.hibernate.type.TextType")
     private String countryName;
-    @Basic
+
     @Column(name = "state_code")
+    @Type(type = "org.hibernate.type.TextType")
     private String stateCode;
-    @Basic
+
     @Column(name = "type")
+    @Type(type = "org.hibernate.type.TextType")
     private String type;
-    @Basic
+
     @Column(name = "latitude")
     private BigDecimal latitude;
-    @Basic
+
     @Column(name = "longitude")
     private BigDecimal longitude;
+
     @ManyToOne
-    @JoinColumn(name = "country_id", insertable = false, updatable = false)
+    @JoinColumn(name = "country_id", updatable = false, insertable = false)
     private Country country;
 
     @Override

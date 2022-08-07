@@ -1,12 +1,18 @@
 databaseChangeLog:
+#  - include:
+#      file: db/changelog/createTables.yaml
+#  - include:
+#      file: db/changelog/insertCountries.sql
+#  - include:
+#      file: db/changelog/insertStates.sql
+#  - include:
+#      file: db/changelog/insertCities.sql
   - include:
-      file: db/changelog/createTables.yaml
+      file: db/changelog/cities.sql
   - include:
-      file: db/changelog/insertCountries.sql
+      file: db/changelog/countries.sql
   - include:
-      file: db/changelog/insertStates.sql
-  - include:
-      file: db/changelog/insertCities.sql
+      file: db/changelog/states.sql
 #  - include:
 #      file: db/changelog/test.sql
 #  - include:

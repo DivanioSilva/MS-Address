@@ -1,0 +1,156 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-cities-1
+      author: dcsilva (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: cities_pkey
+                  name: id
+                  type: INT
+              - column:
+                  name: name
+                  type: VARCHAR(800)
+              - column:
+                  name: state_id
+                  type: INT
+              - column:
+                  name: state_code
+                  type: VARCHAR(800)
+              - column:
+                  name: state_name
+                  type: VARCHAR(800)
+              - column:
+                  name: country_id
+                  type: INT
+              - column:
+                  name: country_code
+                  type: VARCHAR(800)
+              - column:
+                  name: country_name
+                  type: VARCHAR(800)
+              - column:
+                  name: latitude
+                  type: numeric(65)
+              - column:
+                  name: longitude
+                  type: numeric(65)
+              - column:
+                  name: wikiDataId
+                  type: VARCHAR(800)
+            remarks: Foi feito o import pelo Intellij
+            tableName: cities
+  - changeSet:
+      id: create-table-countries-1
+      author: dcsilva (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: countries_pkey
+                  name: id
+                  type: INT
+              - column:
+                  name: name
+                  type: VARCHAR(800)
+              - column:
+                  name: iso3
+                  type: VARCHAR(800)
+              - column:
+                  name: iso2
+                  type: VARCHAR(800)
+              - column:
+                  name: numeric_code
+                  type: INT
+              - column:
+                  name: phone_code
+                  type: VARCHAR(800)
+              - column:
+                  name: capital
+                  type: VARCHAR(800)
+              - column:
+                  name: currency
+                  type: VARCHAR(800)
+              - column:
+                  name: currency_name
+                  type: VARCHAR(800)
+              - column:
+                  name: currency_symbol
+                  type: VARCHAR(800)
+              - column:
+                  name: tld
+                  type: VARCHAR(800)
+              - column:
+                  name: native
+                  type: VARCHAR(800)
+              - column:
+                  name: region
+                  type: VARCHAR(800)
+              - column:
+                  name: subregion
+                  type: VARCHAR(800)
+              - column:
+                  name: timezones
+                  type: TEXT
+              - column:
+                  name: latitude
+                  type: numeric(65)
+              - column:
+                  name: longitude
+                  type: numeric(65)
+              - column:
+                  name: emoji
+                  type: VARCHAR(800)
+              - column:
+                  name: emojiU
+                  type: VARCHAR(800)
+            tableName: countries
+  - changeSet:
+      id: create-table-states-1
+      author: dcsilva (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: states_pkey
+                  name: id
+                  type: INT
+              - column:
+                  name: name
+                  type: VARCHAR(800)
+              - column:
+                  name: country_id
+                  type: INT
+              - column:
+                  name: country_code
+                  type: VARCHAR(800)
+              - column:
+                  name: country_name
+                  type: VARCHAR(800)
+              - column:
+                  name: state_code
+                  type: VARCHAR(800)
+              - column:
+                  name: type
+                  type: VARCHAR(800)
+              - column:
+                  name: latitude
+                  type: numeric(65)
+              - column:
+                  name: longitude
+                  type: numeric(65)
+            tableName: states
+

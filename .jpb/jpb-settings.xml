@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DatabaseMigrationSettings" liquibaseFileType="SQL">
+    <database-infos>
+      <database-info>
+        <option name="enabled" value="true" />
+        <dbms-id>postgres</dbms-id>
+      </database-info>
+    </database-infos>
+  </component>
+  <component name="JpaLiquibaseChangesConfig">
+    <exclude-change idName="cities#test" tagName="dropColumn" />
+    <exclude-change idName="cities#wikiDataId" tagName="dropColumn" />
+    <exclude-change idName="cities#id" tagName="dropColumn" />
+    <exclude-change idName="cities#country_code" tagName="modifyDataType" />
+    <exclude-change idName="states#country_code" tagName="modifyDataType" />
+    <exclude-change idName="cities#country_name" tagName="modifyDataType" />
+    <exclude-change idName="states#country_name" tagName="modifyDataType" />
+    <exclude-change idName="cities#id" tagName="addColumn" />
+    <exclude-change idName="states#id" tagName="dropColumn" />
+    <exclude-change idName="states#id" tagName="addColumn" />
+    <exclude-change idName="cities#name" tagName="modifyDataType" />
+    <exclude-change idName="states#name" tagName="modifyDataType" />
+    <exclude-change idName="cities#state_code" tagName="modifyDataType" />
+    <exclude-change idName="states#state_code" tagName="modifyDataType" />
+    <exclude-change idName="cities#state_name" tagName="modifyDataType" />
+    <exclude-change idName="states#type" tagName="modifyDataType" />
+    <exclude-change idName="flyway_schema_history_s_idx" tagName="createIndex" />
+    <exclude-change idName="flyway_schema_history" tagName="createTable" />
+    <exclude-change idName="countries#emojiu" tagName="dropColumn" />
+    <exclude-change idName="countries#phone_code" tagName="dropColumn" />
+    <exclude-change idName="countries#id" tagName="dropColumn" />
+    <exclude-change idName="countries#capital" tagName="modifyDataType" />
+    <exclude-change idName="countries#currency" tagName="modifyDataType" />
+    <exclude-change idName="countries#currency_name" tagName="modifyDataType" />
+    <exclude-change idName="countries#currency_symbol" tagName="modifyDataType" />
+    <exclude-change idName="countries#emoji" tagName="modifyDataType" />
+    <exclude-change idName="countries#id" tagName="addColumn" />
+    <exclude-change idName="countries#numeric_code" tagName="addNotNullConstraint" />
+    <exclude-change idName="countries#region" tagName="modifyDataType" />
+    <exclude-change idName="countries#timezones" tagName="modifyDataType" />
+    <exclude-change idName="countries#tld" tagName="modifyDataType" />
+  </component>
+</project>

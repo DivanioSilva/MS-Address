@@ -21,7 +21,8 @@ create table countries
     latitude        numeric,
     longitude       numeric,
     emoji           text,
-    "emojiU"        text
+    "emojiU"        text,
+    CONSTRAINT countries_pkey PRIMARY KEY (id)
 );
 
 alter table countries
@@ -277,3 +278,4 @@ INSERT INTO silva.countries (id, name, iso3, iso2, numeric_code, phone_code, cap
 INSERT INTO silva.countries (id, name, iso3, iso2, numeric_code, phone_code, capital, currency, currency_name, currency_symbol, tld, native, region, subregion, timezones, latitude, longitude, emoji, "emojiU") VALUES (245, 'Yemen', 'YEM', 'YE', 887, '967', 'Sanaa', 'YER', 'Yemeni rial', '﷼', '.ye', 'اليَمَن', 'Asia', 'Western Asia', '[{zoneName:''Asia\/Aden'',gmtOffset:10800,gmtOffsetName:''UTC+03:00'',abbreviation:''AST'',tzName:''Arabia Standard Time''}]', 15, 48, '🇾🇪', 'U+1F1FE U+1F1EA');
 INSERT INTO silva.countries (id, name, iso3, iso2, numeric_code, phone_code, capital, currency, currency_name, currency_symbol, tld, native, region, subregion, timezones, latitude, longitude, emoji, "emojiU") VALUES (246, 'Zambia', 'ZMB', 'ZM', 894, '260', 'Lusaka', 'ZMW', 'Zambian kwacha', 'ZK', '.zm', 'Zambia', 'Africa', 'Eastern Africa', '[{zoneName:''Africa\/Lusaka'',gmtOffset:7200,gmtOffsetName:''UTC+02:00'',abbreviation:''CAT'',tzName:''Central Africa Time''}]', -15, 30, '🇿🇲', 'U+1F1FF U+1F1F2');
 INSERT INTO silva.countries (id, name, iso3, iso2, numeric_code, phone_code, capital, currency, currency_name, currency_symbol, tld, native, region, subregion, timezones, latitude, longitude, emoji, "emojiU") VALUES (247, 'Zimbabwe', 'ZWE', 'ZW', 716, '263', 'Harare', 'ZWL', 'Zimbabwe Dollar', '$', '.zw', 'Zimbabwe', 'Africa', 'Eastern Africa', '[{zoneName:''Africa\/Harare'',gmtOffset:7200,gmtOffsetName:''UTC+02:00'',abbreviation:''CAT'',tzName:''Central Africa Time''}]', -20, 30, '🇿🇼', 'U+1F1FF U+1F1FC');
+

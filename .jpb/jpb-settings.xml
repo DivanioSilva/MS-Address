@@ -10,7 +10,6 @@
   </component>
   <component name="JpaLiquibaseChangesConfig">
     <exclude-change idName="cities#test" tagName="dropColumn" />
-    <exclude-change idName="cities#wikiDataId" tagName="dropColumn" />
     <exclude-change idName="cities#id" tagName="dropColumn" />
     <exclude-change idName="cities#country_code" tagName="modifyDataType" />
     <exclude-change idName="states#country_code" tagName="modifyDataType" />
@@ -27,7 +26,6 @@
     <exclude-change idName="states#type" tagName="modifyDataType" />
     <exclude-change idName="flyway_schema_history_s_idx" tagName="createIndex" />
     <exclude-change idName="flyway_schema_history" tagName="createTable" />
-    <exclude-change idName="countries#emojiu" tagName="dropColumn" />
     <exclude-change idName="countries#phone_code" tagName="dropColumn" />
     <exclude-change idName="countries#id" tagName="dropColumn" />
     <exclude-change idName="countries#capital" tagName="modifyDataType" />

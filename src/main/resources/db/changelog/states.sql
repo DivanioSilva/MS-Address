@@ -11,7 +11,8 @@ create table states
     state_code   text,
     type         text,
     latitude     numeric,
-    longitude    numeric
+    longitude    numeric,
+    CONSTRAINT states_pkey PRIMARY KEY (id)
 );
 
 alter table states

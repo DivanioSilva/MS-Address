@@ -4,7 +4,7 @@
     <persistence-units>
       <persistence-unit name="Default" defaultIncludeChangeLogFile="src/main/resources/db/changelog/db.changelog-master.yaml">
         <packages>
-          <package value="com.ds.ms.article" />
+          <package value="com.ds.ms.address" />
         </packages>
       </persistence-unit>
     </persistence-units>

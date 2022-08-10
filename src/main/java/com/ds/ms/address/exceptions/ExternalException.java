@@ -1,0 +1,1 @@
+package com.ds.ms.address.exceptions;import lombok.Builder;@Builderpublic class ExternalException {    private String message;    private int code;}
